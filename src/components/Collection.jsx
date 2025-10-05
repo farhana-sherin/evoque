@@ -4,8 +4,10 @@ import womenShoesImg from '../assets/images/down1.png'
 
 
 import { ChevronRight } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
 
 export const Collection = () => {
+  const navigate =useNavigate()
   return (
     <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -39,12 +41,10 @@ export const Collection = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
                 {/* Content */}
                 <div className="absolute inset-0 flex flex-col justify-end items-start p-8">
-                  <span className="bg-white text-black text-xs font-bold px-3 py-1 rounded-full mb-3 shadow-md">
-                    NEW
-                  </span>
+                  
                   <h4 className="text-3xl font-bold text-white mb-2">Men's Shoes</h4>
                   <p className="text-gray-200 mb-4">Timeless sneakers & formal shoes</p>
-                  <button className="flex items-center gap-2 px-5 py-2 bg-white text-black font-semibold rounded-lg hover:bg-gray-200 transition">
+                  <button onClick={()=> navigate("/MenShop")} className="flex items-center gap-2 px-5 py-2 bg-white text-black font-semibold rounded-lg hover:bg-gray-200 transition">
                     Shop Now <ChevronRight size={18} />
                   </button>
                 </div>
@@ -71,12 +71,10 @@ export const Collection = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
                 {/* Content */}
                 <div className="absolute inset-0 flex flex-col justify-end items-start p-8">
-                  <span className="bg-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-3 shadow-md">
-                    TRENDING
-                  </span>
+                  
                   <h4 className="text-3xl font-bold text-white mb-2">Women's Shoes</h4>
                   <p className="text-gray-200 mb-4">Elegant heels & casual comfort</p>
-                  <button className="flex items-center gap-2 px-5 py-2 bg-white text-black font-semibold rounded-lg hover:bg-gray-200 transition">
+                  <button onClick={()=> navigate("/womenshop")} className="flex items-center gap-2 px-5 py-2 bg-white text-black font-semibold rounded-lg hover:bg-gray-200 transition">
                     Shop Now <ChevronRight size={18} />
                   </button>
                 </div>

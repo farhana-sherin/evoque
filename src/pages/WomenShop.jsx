@@ -1,58 +1,58 @@
 import React, { useState } from "react";
 
-// Shoes
-import menShoe1 from "../assets/images/product-1.jpg";
-import menShoe2 from "../assets/images/product-2.jpg";
-import menShoe3 from "../assets/images/product-3.jpg";
-import menShoe4 from "../assets/images/product-4.jpg";
-import menShoe5 from "../assets/images/product-5.jpg";
-import menShoe6 from "../assets/images/product-6.jpg";
-import menShoe7 from "../assets/images/product-7.jpg";
-import menShoe8 from "../assets/images/product-8.jpg";
-
 // Sandals
-import menSandal1 from "../assets/images/sandal1.jpeg";
-import menSandal2 from "../assets/images/sandal9.jpeg";
-import menSandal3 from "../assets/images/sandal3.jpeg";
-import menSandal4 from "../assets/images/sandal4.jpeg";
-import menSandal5 from "../assets/images/sandal5.jpeg";
-import menSandal6 from "../assets/images/sandal6.jpeg";
-import menSandal7 from "../assets/images/sandal7.jpeg";
-import menSandal8 from "../assets/images/sandal8.avif";
+import womenSandal1 from "../assets/images/ws1.jpeg";
+import womenSandal2 from "../assets/images/ws10.jpeg";
+import womenSandal3 from "../assets/images/ws3.jpeg";
+import womenSandal4 from "../assets/images/ws4.jpeg";
+import womenSandal5 from "../assets/images/ws5.jpeg";
+import womenSandal6 from "../assets/images/ws6.jpeg";
+import womenSandal7 from "../assets/images/ws7.webp";
+import womenSandal8 from "../assets/images/ws8.jpeg";
 
-const MenShop = () => {
-  const categories = ["All", "Casual Shoes", "Formal Shoes", "Sandals"];
+// Sneakers / Casual
+import womenShoe1 from "../assets/images/women1.jpeg";
+import womenShoe2 from "../assets/images/women2.jpeg";
+import womenShoe3 from "../assets/images/women3.webp";
+import womenShoe4 from "../assets/images/women4.jpeg";
+import womenShoe5 from "../assets/images/women5.jpeg";
+import womenShoe6 from "../assets/images/women6.jpeg";
+import womenShoe7 from "../assets/images/women7.jpeg";
+import womenShoe8 from "../assets/images/women8.jpeg";
+
+export const WomenShop = () => {
+  const categories = ["All", "Sneakers", "Casual Wear", "Sandals"];
   const sortOptions = ["Latest", "Price: Low to High", "Price: High to Low"];
 
   const allProducts = [
-    // Casual Shoes
-    { id: 1, name: "Classic Sneaker", category: "Casual Shoes", price: 50, img: menShoe1 },
-    { id: 2, name: "Casual Canvas Shoe", category: "Casual Shoes", price: 40, img: menShoe3 },
-    { id: 3, name: "Comfort Slip-On", category: "Casual Shoes", price: 55, img: menShoe7 },
-    { id: 4, name: "Trail Runner", category: "Casual Shoes", price: 65, img: menShoe8 },
+    // Sneakers
+    { id: 1, name: "Nike Court Vision", category: "Sneakers", price: 750, img: womenShoe1 },
+    { id: 2, name: "Adidas Superstar", category: "Sneakers", price: 880, img: womenShoe2 },
+    { id: 3, name: "Puma Carina", category: "Sneakers", price: 820, img: womenShoe3 },
+    { id: 4, name: "Reebok Classic", category: "Sneakers", price: 760, img: womenShoe4 },
 
-    // Formal Shoes
-    { id: 5, name: "Formal Leather Shoe", category: "Formal Shoes", price: 80, img: menShoe2 },
-    { id: 6, name: "Sporty Runner", category: "Formal Shoes", price: 60, img: menShoe4 },
-    { id: 7, name: "Retro Sneaker", category: "Formal Shoes", price: 70, img: menShoe5 },
-    { id: 8, name: "Office Oxford", category: "Formal Shoes", price: 90, img: menShoe6 },
+    // Casual Wear
+    { id: 5, name: "Casual Loafers", category: "Casual Wear", price: 650, img: womenShoe5 },
+    { id: 6, name: "Everyday Comfort", category: "Casual Wear", price: 700, img: womenShoe6 },
+    { id: 7, name: "Street Style", category: "Casual Wear", price: 780, img: womenShoe7 },
+    { id: 8, name: "Trendy Walk", category: "Casual Wear", price: 720, img: womenShoe8 },
 
     // Sandals
-    { id: 9, name: "Comfort Slide", category: "Sandals", price: 30, img: menSandal1 },
-    { id: 10, name: "Beach Flip-Flop", category: "Sandals", price: 25, img: menSandal2 },
-    { id: 11, name: "Casual Strap Sandal", category: "Sandals", price: 35, img: menSandal3 },
-    { id: 12, name: "Sporty Runner Sandal", category: "Sandals", price: 40, img: menSandal4 },
-    { id: 13, name: "Leather Slide", category: "Sandals", price: 50, img: menSandal5 },
-    { id: 14, name: "Office Sandal", category: "Sandals", price: 45, img: menSandal6 },
-    { id: 15, name: "Outdoor Trek Sandal", category: "Sandals", price: 55, img: menSandal7 },
-    { id: 16, name: "Everyday Comfort", category: "Sandals", price: 38, img: menSandal8 },
+    { id: 9, name: "Summer Sandals", category: "Sandals", price: 500, img: womenSandal1 },
+    { id: 10, name: "Beach Wear Sandals", category: "Sandals", price: 550, img: womenSandal2 },
+    { id: 11, name: "Daily Comfort Sandals", category: "Sandals", price: 600, img: womenSandal3 },
+    { id: 12, name: "Trendy Straps", category: "Sandals", price: 650, img: womenSandal4 },
+    { id: 13, name: "Classic Sandals", category: "Sandals", price: 580, img: womenSandal5 },
+    { id: 14, name: "Casual Flip Style", category: "Sandals", price: 620, img: womenSandal6 },
+    { id: 15, name: "Leather Sandals", category: "Sandals", price: 700, img: womenSandal7 },
+    { id: 16, name: "Minimalist Sandals", category: "Sandals", price: 720, img: womenSandal8 },
   ];
 
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [sortBy, setSortBy] = useState("Latest");
 
   const filteredProducts = allProducts
-    .filter((p) => selectedCategory === "All" || p.category === selectedCategory)
+    .filter((p) => (selectedCategory === "All" ? true : p.category === selectedCategory))
     .sort((a, b) => {
       if (sortBy === "Price: Low to High") return a.price - b.price;
       if (sortBy === "Price: High to Low") return b.price - a.price;
@@ -63,7 +63,7 @@ const MenShop = () => {
     <div className="bg-gray-50 min-h-screen py-32">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
-        <h1 className="text-4xl font-bold text-gray-900 mb-10 text-center">Men's Collection</h1>
+        <h1 className="text-4xl font-bold text-gray-900 mb-10 text-center">Women's Collection</h1>
 
         {/* Filters */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-12 gap-4">
@@ -125,7 +125,7 @@ const MenShop = () => {
                       {item.name}
                     </h3>
                     <span className="text-2xl font-bold text-gray-900 mb-4 block">₹{item.price}</span>
-                      
+                    
                   </div>
                 </div>
               </div>
@@ -136,5 +136,3 @@ const MenShop = () => {
     </div>
   );
 };
-
-export default MenShop;

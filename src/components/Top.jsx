@@ -79,29 +79,17 @@ export const Top = () => {
                     alt={item.name}
                     className="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
 
                 {/* Content */}
-                <div className="p-6">
+                <div className="p-6 text-center">
                   <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-gray-700 transition-colors">{item.name}</h3>
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="text-2xl font-bold text-gray-900">{item.price}</span>
-                    
-                  </div>
-                  <button className="w-full bg-gradient-to-r from-gray-900 to-gray-700 text-white py-3 px-6 rounded-xl font-semibold hover:from-gray-800 hover:to-gray-600 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
-                    Add to Cart
-                  </button>
+                  <span className="text-2xl font-bold text-gray-900">{item.price}</span>
                 </div>
-
-                {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
               </div>
             </div>
           ))}
         </div>
-
-        
       </div>
     </section>
   )

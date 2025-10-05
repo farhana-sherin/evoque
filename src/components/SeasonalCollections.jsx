@@ -5,7 +5,7 @@ import menShoesImg from '../assets/images/collection-2.jpg';
 import menSandalsImg from '../assets/images/sandal1.jpeg';
 import womenShoesImg from '../assets/images/women1.jpeg';
 import womenSandalsImg from '../assets/images/sandal2.jpg';
-import limitedImg from '../assets/images/collection-3.jpg';
+// import limitedImg from '../assets/images/collection-3.jpg';
 
 export const SeasonalCollections = () => {
   const [page, setPage] = useState(0);
@@ -16,7 +16,7 @@ export const SeasonalCollections = () => {
     { title: 'Men Sandals', img: menSandalsImg, link: '/mensandals' },
     { title: 'Women Shoes', img: womenShoesImg, link: '/womenshoes' },
     { title: 'Women Sandals', img: womenSandalsImg, link: '/womensandals' },
-    { title: 'Limited Edition', img: limitedImg, link: '/limitededition' },
+    // { title: 'Limited Edition', img: limitedImg, link: '/limitededition' },
   ];
 
   const itemsPerPage = 3;

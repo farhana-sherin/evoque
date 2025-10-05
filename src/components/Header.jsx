@@ -6,10 +6,11 @@ export const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const navItems = [
+    { name: "Home", path: "/" },
     { name: "Men", path: "/men" },
     { name: "Women", path: "/women" },
     { name: "About", path: "/about" },
-    { name: "Contact", path: "/contact" },
+  
   ];
 
   return (

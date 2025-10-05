@@ -13,7 +13,7 @@ export const Hero = () => {
           className="block w-full h-full object-cover lg:object-fill"
         />
         {/* Gradient overlay for readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/50 sm:from-white/90 sm:via-white/70 sm:to-white/30"></div>
+        
       </div>
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 relative z-10">

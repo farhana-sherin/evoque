@@ -6,11 +6,16 @@ import { Home } from "../pages/Home";
 import { MainLayout } from "../layouts/MainLayout";
 import { About } from "../components/About";
 import { Men } from "../pages/Men";
-import { MenShop } from "../pages/MenShop";
+
 import { Explore } from "../components/ExploreCollection";
 import { MensShoes } from "../components/Menshoes";
 import { MensSandals } from "../components/MensSandals";
 import { AboutUs } from "../components/AboutUs";
+import { Women } from "../pages/Women";
+import { WomensShoes } from "../components/WomenShoes";
+import { WomensSandals } from "../components/Womensandals";
+import { WomenShop } from "../pages/WomenShop";
+import MenShop from "../pages/MenShop"; 
 
   export const router = createBrowserRouter([
     {
@@ -33,12 +38,14 @@ import { AboutUs } from "../components/AboutUs";
 
         },
 
-
         {
           path: "/Menshop",
           element: <MenShop/>
 
         },
+
+
+        
         {
           path: "/explore",
           element: <Explore/>
@@ -51,7 +58,25 @@ import { AboutUs } from "../components/AboutUs";
         {
           path: "/mensandals",
           element: <MensSandals/>
-        }
+        },
+        {
+          path: "/women",
+          element: <Women/>
+        },
+        {
+          path:"/womenshoes",
+          element:<WomensShoes/>
+        },
+        {
+          path:"/womensandals",
+          element:<WomensSandals/>
+        },
+        {
+          path:"/womenshop",
+          element:<WomenShop/>
+
+        },
+        
         
       ],
     },
