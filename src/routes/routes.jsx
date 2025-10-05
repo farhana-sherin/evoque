@@ -10,6 +10,7 @@ import { MenShop } from "../pages/MenShop";
 import { Explore } from "../components/ExploreCollection";
 import { MensShoes } from "../components/Menshoes";
 import { MensSandals } from "../components/MensSandals";
+import { AboutUs } from "../components/AboutUs";
 
   export const router = createBrowserRouter([
     {
@@ -20,6 +21,10 @@ import { MensSandals } from "../components/MensSandals";
           path: "/",
           element: <Home />,
 
+        },
+        {
+          path: "/about",
+          element: <AboutUs/>
         },
 
         {
