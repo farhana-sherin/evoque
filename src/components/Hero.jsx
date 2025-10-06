@@ -1,19 +1,19 @@
 import React from 'react';
 import heroImg from '../assets/images/hero1.png'; // adjust path
+import { useNavigate } from 'react-router-dom';
 
 export const Hero = () => {
+  const navigate=useNavigate()
   return (
     <section className="relative min-h-screen overflow-hidden pt-20">
       
-      {/* Background Image (responsive, now visible on mobile too) */}
-      <div className="absolute inset-0 -z-10">
+      {/* Background Image (hidden on mobile, visible sm+) */}
+      <div className="absolute inset-0 -z-10 hidden sm:block">
         <img 
           src={heroImg}
           alt="Premium EVOQUE Shoes" 
-          className="block w-full h-full object-cover lg:object-fill"
+          className="w-full h-full object-cover lg:object-fill"
         />
-        {/* Gradient overlay for readability */}
-        
       </div>
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 relative z-10">
@@ -42,12 +42,10 @@ export const Hero = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 mt-6 justify-center lg:justify-start animate-fadeInUp delay-400">
-              <button className="bg-gray-900 text-white px-6 sm:px-8 py-3 rounded-lg font-medium hover:bg-gray-800 transition-all duration-300 text-sm transform hover:-translate-y-1 hover:scale-105 shadow-lg">
+              <button onClick={()=> navigate("/explore")} className="bg-gray-900 text-white px-6 sm:px-8 py-3 rounded-lg font-medium hover:bg-gray-800 transition-all duration-300 text-sm transform hover:-translate-y-1 hover:scale-105 shadow-lg">
                 Shop Collection
               </button>
-              <button className="border border-gray-300 text-gray-700 px-6 sm:px-8 py-3 rounded-lg font-medium hover:border-gray-400 hover:bg-white/80 transition-all duration-300 text-sm transform hover:-translate-y-1 hover:scale-105">
-                View Catalog
-              </button>
+              
             </div>
 
             {/* Stats */}
@@ -69,8 +67,6 @@ export const Hero = () => {
 
           {/* Right: Floating Elements (hidden on small screens) */}
           <div className="relative hidden sm:flex items-center justify-center">
-           
-
             {/* Decorative circles */}
             <div className="hidden lg:block absolute top-1/2 right-1/4 w-32 h-32 bg-gradient-to-br from-blue-100/40 to-transparent rounded-full blur-2xl animate-pulse-slow"></div>
             <div className="hidden lg:block absolute bottom-1/3 left-1/4 w-24 h-24 bg-gradient-to-br from-gray-200/40 to-transparent rounded-full blur-xl animate-pulse-slow delay-1000"></div>

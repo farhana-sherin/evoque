@@ -8,12 +8,12 @@ import women6 from '../assets/images/women6.jpeg'
 
 export const WomenLatestArrivals = () => {
   const latest = [
-    { img: women1, name: 'Elegant Heels', price: '₹1,200' },
-    { img: women2, name: 'Casual Sneakers', price: '₹950' },
-    { img: women3, name: 'Chic Sandals', price: '₹780' },
-    { img: women4, name: 'Classic Flats', price: '₹650' },
-    { img: women5, name: 'Stylish Boots', price: '₹1,400' },
-    { img: women6, name: 'Designer Wedges', price: '₹1,100' },
+    { img: women1,  },
+    { img: women2, },
+    { img: women3, },
+    { img: women4,  },
+    { img: women5,  },
+    { img: women6,  },
   ]
 
   const [visibleCount, setVisibleCount] = useState(3)
@@ -56,10 +56,7 @@ export const WomenLatestArrivals = () => {
                 alt={item.name}
                 className="w-full h-80 object-cover rounded-3xl"
               />
-              <div className="p-6 text-center">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{item.name}</h3>
-                <span className="text-2xl font-bold text-gray-900">{item.price}</span>
-              </div>
+              
             </div>
           ))}
         </div>

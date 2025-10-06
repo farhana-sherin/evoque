@@ -25,27 +25,22 @@ const MenShop = () => {
   const sortOptions = ["Latest", "Price: Low to High", "Price: High to Low"];
 
   const allProducts = [
-    // Casual Shoes
-    { id: 1, name: "Classic Sneaker", category: "Casual Shoes", price: 50, img: menShoe1 },
-    { id: 2, name: "Casual Canvas Shoe", category: "Casual Shoes", price: 40, img: menShoe3 },
-    { id: 3, name: "Comfort Slip-On", category: "Casual Shoes", price: 55, img: menShoe7 },
-    { id: 4, name: "Trail Runner", category: "Casual Shoes", price: 65, img: menShoe8 },
-
-    // Formal Shoes
-    { id: 5, name: "Formal Leather Shoe", category: "Formal Shoes", price: 80, img: menShoe2 },
-    { id: 6, name: "Sporty Runner", category: "Formal Shoes", price: 60, img: menShoe4 },
-    { id: 7, name: "Retro Sneaker", category: "Formal Shoes", price: 70, img: menShoe5 },
-    { id: 8, name: "Office Oxford", category: "Formal Shoes", price: 90, img: menShoe6 },
-
-    // Sandals
-    { id: 9, name: "Comfort Slide", category: "Sandals", price: 30, img: menSandal1 },
-    { id: 10, name: "Beach Flip-Flop", category: "Sandals", price: 25, img: menSandal2 },
-    { id: 11, name: "Casual Strap Sandal", category: "Sandals", price: 35, img: menSandal3 },
-    { id: 12, name: "Sporty Runner Sandal", category: "Sandals", price: 40, img: menSandal4 },
-    { id: 13, name: "Leather Slide", category: "Sandals", price: 50, img: menSandal5 },
-    { id: 14, name: "Office Sandal", category: "Sandals", price: 45, img: menSandal6 },
-    { id: 15, name: "Outdoor Trek Sandal", category: "Sandals", price: 55, img: menSandal7 },
-    { id: 16, name: "Everyday Comfort", category: "Sandals", price: 38, img: menSandal8 },
+    { id: 1, category: "Casual Shoes", img: menShoe1 },
+    { id: 2, category: "Casual Shoes", img: menShoe3 },
+    { id: 3, category: "Casual Shoes", img: menShoe7 },
+    { id: 4, category: "Casual Shoes", img: menShoe8 },
+    { id: 5, category: "Formal Shoes", img: menShoe2 },
+    { id: 6, category: "Formal Shoes", img: menShoe4 },
+    { id: 7, category: "Formal Shoes", img: menShoe5 },
+    { id: 8, category: "Formal Shoes", img: menShoe6 },
+    { id: 9, category: "Sandals", img: menSandal1 },
+    { id: 10, category: "Sandals", img: menSandal2 },
+    { id: 11, category: "Sandals", img: menSandal3 },
+    { id: 12, category: "Sandals", img: menSandal4 },
+    { id: 13, category: "Sandals", img: menSandal5 },
+    { id: 14, category: "Sandals", img: menSandal6 },
+    { id: 15, category: "Sandals", img: menSandal7 },
+    { id: 16, category: "Sandals", img: menSandal8 },
   ];
 
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -54,8 +49,8 @@ const MenShop = () => {
   const filteredProducts = allProducts
     .filter((p) => selectedCategory === "All" || p.category === selectedCategory)
     .sort((a, b) => {
-      if (sortBy === "Price: Low to High") return a.price - b.price;
-      if (sortBy === "Price: High to Low") return b.price - a.price;
+      if (sortBy === "Price: Low to High") return a.id - b.id; // just maintain order
+      if (sortBy === "Price: High to Low") return b.id - a.id;
       return b.id - a.id; // Latest
     });
 
@@ -109,24 +104,11 @@ const MenShop = () => {
             {filteredProducts.map((item) => (
               <div key={item.id} className="group cursor-pointer">
                 <div className="relative bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 group-hover:-translate-y-2">
-                  {/* Image */}
-                  <div className="relative overflow-hidden">
-                    <img
-                      src={item.img}
-                      alt={item.name}
-                      className="w-full h-80 object-cover transform group-hover:scale-105 transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-50 transition-opacity duration-500 rounded-3xl"></div>
-                  </div>
-
-                  {/* Product Info */}
-                  <div className="p-6 text-center">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-gray-700 transition-colors">
-                      {item.name}
-                    </h3>
-                    <span className="text-2xl font-bold text-gray-900 mb-4 block">₹{item.price}</span>
-                      
-                  </div>
+                  <img
+                    src={item.img}
+                    alt={`Product ${item.id}`}
+                    className="w-full h-80 object-cover transform group-hover:scale-105 transition-transform duration-700"
+                  />
                 </div>
               </div>
             ))}

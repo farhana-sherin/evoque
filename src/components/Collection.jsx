@@ -1,6 +1,6 @@
 import React from 'react'
 import menShoesImg from '../assets/images/men1.png'
-import womenShoesImg from '../assets/images/down1.png'
+import womenShoesImg from '../assets/images/hero8.jpg'
 
 
 import { ChevronRight } from 'lucide-react'

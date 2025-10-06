@@ -32,7 +32,7 @@ export const AboutUs = () => {
           {/* Image Column */}
           <div className="relative">
             <img
-              src="src/assets/images/about.jpg"
+              src="src/assets/images/her6.jpg"
               alt="Evoque Shoes"
               className="w-full rounded-3xl shadow-xl object-cover h-[500px] lg:h-[500px]"
             />

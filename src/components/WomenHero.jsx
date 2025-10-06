@@ -1,5 +1,5 @@
 import React from "react";
-import womenHeroImg from "../assets/images/dd.jpg"; // replace with your women hero image
+import womenHeroImg from "../assets/images/ddown8.jpg"; // replace with your women hero image
 import { useNavigate } from "react-router-dom";
 
 export const WomenHero = () => {

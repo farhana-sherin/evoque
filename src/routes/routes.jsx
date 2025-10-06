@@ -16,6 +16,7 @@ import { WomensShoes } from "../components/WomenShoes";
 import { WomensSandals } from "../components/Womensandals";
 import { WomenShop } from "../pages/WomenShop";
 import MenShop from "../pages/MenShop"; 
+import { Map } from "../components/Map";
 
   export const router = createBrowserRouter([
     {
@@ -75,7 +76,13 @@ import MenShop from "../pages/MenShop";
           path:"/womenshop",
           element:<WomenShop/>
 
-        },
+        },{
+
+          path:"/map",
+          element:<Map />
+          
+
+        }
         
         
       ],

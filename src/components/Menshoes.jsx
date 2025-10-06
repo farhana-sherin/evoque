@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import menShoe1 from "../assets/images/product-1.jpg";
 import menShoe2 from "../assets/images/product-2.jpg";
 import menShoe3 from "../assets/images/product-3.jpg";
@@ -10,22 +10,15 @@ import menShoe8 from "../assets/images/product-8.jpg";
 
 export const MensShoes = () => {
   const allShoes = [
-    { name: "Classic Sneaker", img: menShoe1, price: 50 },
-    { name: "Formal Leather Shoe", img: menShoe2, price: 80 },
-    { name: "Casual Canvas Shoe", img: menShoe3, price: 40 },
-    { name: "Sporty Runner", img: menShoe4, price: 60 },
-    { name: "Retro Sneaker", img: menShoe5, price: 70 },
-    { name: "Office Oxford", img: menShoe6, price: 90 },
-    { name: "Comfort Slip-On", img: menShoe7, price: 55 },
-    { name: "Trail Runner", img: menShoe8, price: 65 },
+    menShoe1,
+    menShoe2,
+    menShoe3,
+    menShoe4,
+    menShoe5,
+    menShoe6,
+    menShoe7,
+    menShoe8,
   ];
-
-  const [sortOrder, setSortOrder] = useState("asc");
-
-  // Sort shoes by price
-  const sortedShoes = [...allShoes].sort((a, b) =>
-    sortOrder === "asc" ? a.price - b.price : b.price - a.price
-  );
 
   return (
     <section className="py-28 bg-gray-50">
@@ -34,35 +27,18 @@ export const MensShoes = () => {
           Men’s Shoes
         </h2>
 
-        {/* Sort by Price aligned left */}
-        <div className="flex justify-start mb-6">
-          <label className="mr-3 font-semibold">Sort by Price:</label>
-          <select
-            value={sortOrder}
-            onChange={(e) => setSortOrder(e.target.value)}
-            className="border rounded px-3 py-2 shadow-sm hover:shadow-md transition"
-          >
-            <option value="asc">Low to High</option>
-            <option value="desc">High to Low</option>
-          </select>
-        </div>
-
         {/* Shoes Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {sortedShoes.map((shoe, idx) => (
+          {allShoes.map((imgSrc, idx) => (
             <div
               key={idx}
-              className="flex flex-col items-center justify-center bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 cursor-pointer"
+              className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 cursor-pointer"
             >
               <img
-                src={shoe.img}
-                alt={shoe.name}
-                className="w-full h-64 object-cover rounded-t-2xl"
+                src={imgSrc}
+                alt={`Men’s Shoe ${idx + 1}`}
+                className="w-full h-64 object-cover rounded-2xl"
               />
-              <div className="p-4 text-center">
-                <h3 className="text-gray-900 font-semibold text-lg">{shoe.name}</h3>
-                <p className="text-gray-900 font-bold mt-1">₹{shoe.price}</p>
-              </div>
             </div>
           ))}
         </div>

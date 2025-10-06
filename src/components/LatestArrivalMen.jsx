@@ -8,12 +8,12 @@ import men6 from '../assets/images/product-6.jpg'
 
 export const LatestArrivals = () => {
   const latest = [
-    { img: men1, name: 'Nike Air Zoom', price: '₹820' },
-    { img: men2, name: 'Adidas Ultraboost', price: '₹950' },
-    { img: men3, name: 'Puma RS-X', price: '₹700' },
-    { img: men4, name: 'Reebok Nano X', price: '₹780' },
-    { img: men5, name: 'Nike Air Max 270', price: '₹850' },
-    { img: men6, name: 'Adidas Solar Glide', price: '₹900' },
+    { img: men1 },
+    { img: men2 },
+    { img: men3 },
+    { img: men4 },
+    { img: men5 },
+    { img: men6 },
   ]
 
   const [visibleCount, setVisibleCount] = useState(3)
@@ -42,8 +42,7 @@ export const LatestArrivals = () => {
             Latest Arrivals
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Check out the newest additions to our men's shoe collection, blending style,
-            comfort, and performance.
+            Check out the newest additions to our men's shoe collection.
           </p>
         </div>
 
@@ -53,13 +52,9 @@ export const LatestArrivals = () => {
             <div key={index} className="relative bg-white rounded-3xl shadow-xl overflow-hidden">
               <img
                 src={item.img}
-                alt={item.name}
+                alt={`Latest Arrival ${index + 1}`}
                 className="w-full h-80 object-cover rounded-3xl"
               />
-              <div className="p-6 text-center">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{item.name}</h3>
-                <span className="text-2xl font-bold text-gray-900">{item.price}</span>
-              </div>
             </div>
           ))}
         </div>

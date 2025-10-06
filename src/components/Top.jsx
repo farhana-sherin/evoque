@@ -7,12 +7,12 @@ import top4Img from '../assets/images/shoe.png'
 
 export const Top = () => {
   const topPicks = [
-    { img: top1Img, name: 'Nike Air Max 720', price: '₹780' },
-    { img: top2Img, name: 'Adidas Ultraboost 22', price: '₹950' },
-    { img: top3Img, name: 'Puma RS-X Reinvention', price: '₹650' },
-    { img: top4Img, name: 'Reebok Nano X', price: '₹750' },
-    { img: top1Img, name: 'Nike Air Max 270', price: '₹820' },
-    { img: top2Img, name: 'Adidas Solar Glide', price: '₹900' },
+    { img: top1Img },
+    { img: top2Img },
+    { img: top3Img },
+    { img: top4Img },
+    { img: top1Img },
+    { img: top2Img },
   ]
 
   const [page, setPage] = useState(0)
@@ -47,7 +47,7 @@ export const Top = () => {
           </div>
           <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">Top Picks</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Discover our most popular and trending shoe collections, handpicked for their exceptional quality and style.
+            Discover our most popular and trending shoe collections.
           </p>
         </div>
 
@@ -72,20 +72,11 @@ export const Top = () => {
           {visibleCards.map((item, index) => (
             <div key={index} className="group cursor-pointer">
               <div className="relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden group-hover:-translate-y-2">
-                {/* Image Container */}
-                <div className="relative overflow-hidden">
-                  <img
-                    src={item.img}
-                    alt={item.name}
-                    className="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-700"
-                  />
-                </div>
-
-                {/* Content */}
-                <div className="p-6 text-center">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-gray-700 transition-colors">{item.name}</h3>
-                  <span className="text-2xl font-bold text-gray-900">{item.price}</span>
-                </div>
+                <img
+                  src={item.img}
+                  alt={`Top Pick ${index + 1}`}
+                  className="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-700"
+                />
               </div>
             </div>
           ))}
