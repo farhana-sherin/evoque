@@ -79,21 +79,7 @@ const MenShop = () => {
             ))}
           </div>
 
-          {/* Sort */}
-          <div className="flex items-center gap-3">
-            <span className="text-gray-700 font-medium">Sort by:</span>
-            <select
-              value={sortBy}
-              onChange={(e) => setSortBy(e.target.value)}
-              className="px-4 py-2 border rounded-lg text-gray-800"
-            >
-              {sortOptions.map((opt) => (
-                <option key={opt} value={opt}>
-                  {opt}
-                </option>
-              ))}
-            </select>
-          </div>
+          
         </div>
 
         {/* Products Grid */}
