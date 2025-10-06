@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom"; 
+import heroImg from '../assets/images/logo.png';
 import { Menu, X } from "lucide-react";
 
 export const Header = () => {
@@ -23,7 +24,7 @@ export const Header = () => {
         <div className="flex-1 flex items-center">
           <Link to="/" className="flex items-center space-x-2">
             <img
-              src="/src/assets/images/logo.png"
+              src={heroImg}
               alt="EVOQUE Logo"
               className="h-10 w-auto object-contain transition-transform duration-300 hover:scale-110"
             />
