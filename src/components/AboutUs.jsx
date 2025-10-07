@@ -41,6 +41,7 @@ export const AboutUs = () => {
           </div>
         </div>
       </div>
+      
     </section>
   )
 }
