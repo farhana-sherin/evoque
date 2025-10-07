@@ -38,10 +38,11 @@ export const AboutUs = () => {
               alt="Evoque Shoes"
               className="w-full rounded-3xl shadow-xl object-cover h-[500px] lg:h-[500px]"
             />
+            
           </div>
         </div>
       </div>
-      
+
     </section>
   )
 }
