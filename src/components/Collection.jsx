@@ -10,7 +10,7 @@ export const Collection = () => {
   const navigate =useNavigate()
   return (
     <section className="py-20 bg-gray-50">
-      
+
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         
         {/* Section Header */}
@@ -88,6 +88,7 @@ export const Collection = () => {
         </div>
 
       </div>
+      
     </section>
   )
 }
