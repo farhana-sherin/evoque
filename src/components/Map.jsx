@@ -18,6 +18,7 @@ export const Map = () => {
       </div>
 
       {/* Map */}
+      
       <div className="w-full h-[60vh] mb-12">
         <iframe
           title="Google Map"

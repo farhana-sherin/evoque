@@ -15,6 +15,7 @@ export const Footer = () => {
           <div className="flex items-center gap-6 text-sm">
             <div className="flex items-center gap-2">
               <Phone size={16} />
+              
               <span>+91 98765 43210</span>
             </div>
             <div className="flex items-center gap-2">
