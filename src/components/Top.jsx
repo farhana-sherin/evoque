@@ -16,6 +16,7 @@ export const Top = () => {
   ]
 
   const [page, setPage] = useState(0)
+  
   const cardsPerPage = 3
   const totalPages = Math.ceil(topPicks.length / cardsPerPage)
 
