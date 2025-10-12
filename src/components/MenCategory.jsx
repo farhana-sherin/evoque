@@ -13,6 +13,7 @@ export const MenCategories = () => {
 
   return (
     <section className="py-20 bg-gray-50">
+      
       <div className="max-w-7xl mx-auto px-6 sm:px-10 text-center">
         <h2 className="text-4xl font-extrabold text-gray-900 mb-12">
           Shop By Category
