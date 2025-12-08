@@ -60,7 +60,7 @@ export const Hero = () => {
             <img
               src={heroImg}
               alt="Premium EVOQUE Shoes"
-              className="w-[60rem] object-contain animate-float"
+              className="w-full max-w-none object-contain animate-float lg:scale-110 xl:scale-125"
             />
           </div>
 
