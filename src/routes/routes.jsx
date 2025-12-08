@@ -4,7 +4,6 @@ import {
   } from "react-router-dom";
 import { Home } from "../pages/Home";
 import { MainLayout } from "../layouts/MainLayout";
-import { About } from "../components/About";
 import { Men } from "../pages/Men";
 
 import { Explore } from "../components/ExploreCollection";

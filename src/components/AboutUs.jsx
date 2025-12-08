@@ -16,6 +16,7 @@ export const AboutUs = () => {
         </div>
 
         {/* Two-Column Info */}
+        
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Column */}
           <div>
